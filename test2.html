@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receive Data</title>
+</head>
+<body>
+    <h1>Received Data</h1>
+    <pre id="receivedData"></pre>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const data = params.get('data');
+            document.getElementById('receivedData').textContent = data;
+        });
+    </script>
+</body>
+</html>
